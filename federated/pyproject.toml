@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trafficfl"
+version = "1.0.0"
+description = "Federated traffic forecasting with Flower and PyTorch (GRU, FedAvg)"
+license = {file = "LICENSE"}
+dependencies = [
+    "flwr[simulation]>=1.36.0",
+    "torch==2.10.0",
+    "pandas",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "ravnoor"
+fab-format-version = 1
+flwr-version-target = "1.36.0"
+
+[tool.flwr.app.components]
+serverapp = "trafficfl.server_app:app"
+clientapp = "trafficfl.client_app:app"
+
+[tool.flwr.app.config]
+num-server-rounds = 20
+local-epochs = 1
+learning-rate = 0.001
+batch-size = 64
+hidden-size = 32
+seed = 42
+project-dir = "C:/Users/noorr/Documents/traffic-fl"
