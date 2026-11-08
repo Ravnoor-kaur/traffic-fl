@@ -1,0 +1,9 @@
+timestamp,experiment,junction,mae,rmse,settings
+2026-11-08 01:59:04,baseline_last_hour,1,6.256,8.093,none
+2026-11-08 01:59:04,centralized_gru,1,5.599,7.655,seed=42 epochs=10 batch=64 lr=0.001 hidden=32
+2026-11-08 01:59:04,baseline_last_hour,2,2.94,3.735,none
+2026-11-08 01:59:04,centralized_gru,2,4.092,5.247,seed=42 epochs=10 batch=64 lr=0.001 hidden=32
+2026-11-08 01:59:04,baseline_last_hour,3,3.718,6.477,none
+2026-11-08 01:59:04,centralized_gru,3,2.997,5.567,seed=42 epochs=10 batch=64 lr=0.001 hidden=32
+2026-11-08 01:59:04,baseline_last_hour,4,2.599,3.545,none
+2026-11-08 01:59:04,centralized_gru,4,2.109,2.979,seed=42 epochs=10 batch=64 lr=0.001 hidden=32
